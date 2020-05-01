@@ -161,6 +161,7 @@
             </div>
 
             <div class="col-sm-10 col-md-9 col-lg-10 productFrame">
+               
                 <div class="row rowProduct">
                     <div class="col-sm-3 col-md-3 col-lg-3 productImage">
                         <img class="img-fluid" src="https://5.imimg.com/data5/QL/DP/MY-2599588/husqvarna-tf544-power-tiller-500x500.jpg" alt="Advertisement Pic">
@@ -184,9 +185,8 @@
                             <div class="col-sm-12 col-md-4 col-lg-4 productCompany">
                                 <p class="productPara">Sreevatsa Agchamp</p>
                                 <p class="productPara companyAddress">Tamil Nadu</p>
-                                <button type="button" class="btn btn-primary">Get Quote</button> <br>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalGetQuote">Get Quote</button> <br>
                                 <button type="button" class="btn btn-primary">Contact Supplier</button>
-                                
                             </div>
                         </div>
                     </div>
@@ -288,5 +288,50 @@
         </div>
     </div>
 
-    </body>
+    <div class="modal fade modalGetQuote" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Get Quote</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+               
+                <div class="row">
+                    <div class="col-sm-3 col-sm-4 col-lg-4 quoteImg">
+                      <img src="https://5.imimg.com/data5/QL/DP/MY-2599588/husqvarna-tf544-power-tiller-500x500.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-sm-9 col-sm-8 col-lg-8 p-3 quoteBody">
+                        <h5 class="text-center">Husqvarna TF 544 Power Tiller</h5>
+                        <form action="">   
+                            <div class="form-group">
+                                <input type="number" name="textQuantity" id="textQuantity" class="form-control quoteControl" placeholder="Quantity">
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" name="txtRequirements" id="txtRequirements" class="form-control quoteControl w-75" placeholder="Requirement">
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary float-right quoteControl">
+                            </div>
+                        </form>
+    
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+         </div>
+        </div>
+      </div>
+      
+
+</body>
 </html>

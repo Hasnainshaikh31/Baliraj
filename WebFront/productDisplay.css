@@ -62,9 +62,19 @@ body{
     color: orange;
 }
 
-@media only screen and (max-width : 800px){
+.quoteControl{
+    width: unset;
+    display: unset;
+    margin: 0px 15px;
+    border: unset;
+    border-bottom: 1px solid #495057;
+}
 
-    
+
+@media only screen and (max-width : 800px){
+    .quoteImg img{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
@@ -110,5 +120,7 @@ body{
 
 
 @media only screen and (min-width : 800px){
-    
+    .quoteImg img{
+        width: 14vw;
+    }
 }
