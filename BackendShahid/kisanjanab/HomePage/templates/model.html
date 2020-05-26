@@ -6,23 +6,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script> 
-   
-   
-   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    {% comment %} <script src="{%static 'js/bootstrap.min.js'%}"></script> {% endcomment %}
-     <script src="{%static 'js/bootstrap.js'%}"></script>
+    <script src="{%static 'js/bootstrap.js'%}"></script>
     
-    {% comment %} <script type = "javascript" src="{%static 'js/jquery-3.5.1.min.js'%}"></script> {% endcomment %}
-  
     <link rel="stylesheet" href="{%static 'pageCss/HomeTwo.css'%}">
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
    
+  
+  {% block scriptBlock%}
+
+  {% endblock %}
+
+
   {%block cssBlock %}
 
   {% endblock %}
+
+
+
+  <style>
+      
+  body{
+      font-family: 'Baloo Tammudu 2', cursive;
+      background-color:#e2e6df;
+  }
+
+  .navBar{
+      background-color: #303a52;
+      color: white;
+      padding: 3vh 0px 1vh;
+  }
+
+  .navBarBelt{
+      font-family: 'Kalam', cursive;
+      font-size: 7vh;
+      padding: 1vh 0px 0px;
+  }
+
+  #navBeltTwo{
+      padding: 0px 5vw 0px;
+  }
+
+  .navBeltCategory .btn{
+      color: dimgrey;
+      border-radius: 0px;
+      border: 0px;
+  }
+
+  .navBeltTwoInputGroup{
+      background-color: white;
+      border-radius: 2px;
+  }
+
+  .navbarSearchInput{
+      border: none;
+      border-left: 1px solid #ced4da;
+      border-right: 1px solid #ced4da;
+  }
+
+  #btnNavBarSearch{
+      border: none;
+      border-radius: 0px;
+  }
+
+  .btnNavBarSearch img{
+      height: 3vh;
+  }
+
+  .navBarBeltThree ul{
+      font-size: 2.5vh;
+      
+  }
+
+  .navBarBeltThree ul li a{
+      color: white;
+  }
+
+  .dropdown-toggle{
+      color: white;
+  }
+
+  .dropdown-item:hover{
+      background-color: #071a52;
+      color: white;
+  }
+
+  /*Footer*/
+  
+/* Footer Css */
+
+  .footer{
+      background-color: #303a52;
+      color: blanchedalmond;
+  }
+
+  .footer-intro{
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin-top: 20px; /* This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+ /* This creates some space between the element and the border. */
+    border-bottom: 1px solid rgba(211, 206, 206, 0.836); /* This creates the border. Replace black with whatever color you want. */
+  }
+
+  .footer-icon fa-icon{
+      font-size: 20px;
+      margin-left: 8px;
+      background-color: #0363CD;
+      border-radius: 3px;
+      padding: 10px;
+      transition: 0.5s;
+  }
+
+  .footer-icon fa-icon:hover{
+      background-color: gold;
+      color: black;
+  }
+
+  .footer-list{
+      padding: 0px;
+  }
+
+  .footer-list li{
+      list-style-type: none;
+      margin-top: 30px;
+      padding: 0;
+  }
+
+  .footer-list li a{
+      color: white;
+  }
+
+  </style>
 
     <!-- External CSS -->
     
@@ -36,7 +152,7 @@
         <div class="col-sm-2 col-md-2 col-lg-2 order-lg-2 order-md-2 text-center navBarBelt">
         <h2>बळीराजा</h2>
         </div>
-        <div class="col-sm-5 col-md-5 col-lg-5 order-lg-1 order-md-1 navBeltTwo">
+        <div class="col-sm-5 col-md-5 col-lg-5 order-lg-1 order-md-1 navBeltTwo" id = "navBeltTwo">
         <div class="input-group mb-3 navBeltTwoInputGroup">
             <div class="input-group-prepend navBeltCategory">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</button>
@@ -90,7 +206,7 @@
             <input type="text" class="form-control navbarSearchInput" aria-label="Text input with dropdown button" placeholder="Search Product..">
     
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary btnNavBarSearch" type="button"><img src="{%static 'assets/searchBlack.svg'%}" class = "img-fluid" alt="searchIcon"></button>
+                <button class="btn btn-outline-secondary btnNavBarSearch" id = "btnNavBarSearch" type="button" onclick="location.href='/product';"><img src="{%static 'assets/searchBlack.svg'%}" class = "img-fluid" alt="searchIcon"></button>
             </div>
         </div>
         </div>
@@ -128,6 +244,7 @@
 
   {% endblock %}
 
+  <!-- -----------------Footer -->
   <div class="container-fluid p-0">
     <footer class="footer">
         <div class="container-fluid">

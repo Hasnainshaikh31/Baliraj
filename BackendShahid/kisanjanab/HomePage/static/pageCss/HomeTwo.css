@@ -1,70 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
-body{
-    font-family: 'Baloo Tammudu 2', cursive;
-    background-color:#e2e6df;
-}
-
-.navBar{
-    background-color: #303a52;
-    color: white;
-    padding: 3vh 0px 1vh;
-}
-
-.navBarBelt{
-    font-family: 'Kalam', cursive;
-    font-size: 7vh;
-    padding: 1vh 0px 0px;
-}
-
-.navBeltTwo{
-    padding: 0px 5vw 0px;
-}
-
-.navBeltCategory .btn{
-    color: dimgrey;
-    border-radius: 0px;
-    border: 0px;
-}
-
-.navBeltTwoInputGroup{
-    background-color: white;
-    border-radius: 2px;
-}
-
-.navbarSearchInput{
-    border: none;
-    border-left: 1px solid #ced4da;
-    border-right: 1px solid #ced4da;
-}
-
-.btnNavBarSearch{
-    border: none;
-    border-radius: 0px;
-}
-
-.btnNavBarSearch img{
-    height: 3vh;
-}
-
-.navBarBeltThree ul{
-    font-size: 2.5vh;
-    
-}
-
-.navBarBeltThree ul li a{
-    color: white;
-}
-
-.dropdown-toggle{
-    color: white;
-}
-
-.dropdown-item:hover{
-    background-color: #071a52;
-    color: white;
-}
+/* Copied Till Here */
 
 .categories{
     text-align: center;
@@ -103,14 +40,6 @@ body{
     color: white;
 }
 
-.footer-intro{
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    margin-top: 20px; /* This will center the border. */
-    width: 30%; /* Change this to whatever width you want. */
- /* This creates some space between the element and the border. */
-    border-bottom: 1px solid rgba(211, 206, 206, 0.836); /* This creates the border. Replace black with whatever color you want. */
-}
 
 .advertiseCardBody p{
     color: black;
@@ -169,41 +98,9 @@ body{
 .tabset{
     font-size: 2.3vh;
     padding: 2vh 0px 0px;
-}
+} 
 
 /* Footer Css */
-
-.footer{
-    background-color: #303a52;
-    color: blanchedalmond;
-}
-.footer-icon fa-icon{
-    font-size: 20px;
-    margin-left: 8px;
-    background-color: #0363CD;
-    border-radius: 3px;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.footer-icon fa-icon:hover{
-    background-color: gold;
-    color: black;
-}
-
-.footer-list{
-    padding: 0px;
-}
-
-.footer-list li{
-    list-style-type: none;
-    margin-top: 30px;
-    padding: 0;
-}
-
-.footer-list li a{
-    color: white;
-}
 
 .supplierSignInFormControl{
     border: none;

@@ -7,8 +7,10 @@
     <h3>Categories</h3>
     <div class="row m-0 categoriesCompart">     
         <div class="col-6 col-sm-3 col-md-3 col-lg-3">
-           <img src="{%static 'assets/shovel-svgrepo-com.svg' %}" alt="Shovel icon" class="img-fluid">
-           <h5>Farming Tools, <br> Equipment & Machines</h5>
+          <a class = "categoriesAnchor" href="SubCategories/sub/Farming Tools, Equipment & Machines/">
+            <img src="{%static 'assets/shovel-svgrepo-com.svg' %}" alt="Shovel icon" class="img-fluid">
+            <h5>Farming Tools, <br> Equipment & Machines</h5>
+          </a>
         </div>
         <div class="col-6 col-sm-3 col-md-3 col-lg-3">
             <img src="{%static 'assets/plant.svg' %}" alt="Shovel icon" class="img-fluid">
@@ -936,13 +938,13 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Supplier Sign In</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form action="" method = "POST" id="post-form" style="text-align: -webkit-center;">
+          <form action="" method = "POST" style="text-align: -webkit-center;">
             {% csrf_token %}
 
           <div class="form-group">
@@ -1141,22 +1143,7 @@
   //      console.log("shahid")
   //  });
 
-    $(document).on('submit', '#post-form', function(e){
-      e.preventDefault();
-
-      $.ajax({
-        type:'POST',
-        url : 'SupplierSignIn',
-        data : {
-          username : $('#username').val(),
-          password : $('#password').val(),
-          csrfmiddlewaretoken : $('input[name=csrfmiddlewaretoken]').val()
-        },
-        success:function(){
-          alert("Created New User !")
-        }
-      });
-    });
+   
 
 </script>
 
